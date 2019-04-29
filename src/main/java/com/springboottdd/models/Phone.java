@@ -1,5 +1,6 @@
 package com.springboottdd.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,9 @@ public class Phone {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long code;
+	@Column(length = 2, nullable = false)
 	private String ddd;
+	@Column(length = 9, nullable = false)
 	private String number;
 	@ManyToOne
 	@JoinColumn(name = "code_person")
@@ -51,11 +54,11 @@ public class Phone {
 		this.code = code;
 	}
 
-	public Person getPerson() {
+	public Person getperson() {
 		return person;
 	}
 
-	public void setPerson(Person person) {
+	public void setperson(Person person) {
 		this.person = person;
 	}
 

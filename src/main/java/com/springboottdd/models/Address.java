@@ -55,11 +55,11 @@ public class Address {
 		this.code = code;
 	}
 
-	public Person getPerson() {
+	public Person getperson() {
 		return person;
 	}
 
-	public void setPerson(Person person) {
+	public void setperson(Person person) {
 		this.person = person;
 	}
 
